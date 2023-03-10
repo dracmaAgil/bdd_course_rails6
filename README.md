@@ -1,11 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is the repo of the BDD course with Rails 6 - Alpha blog
 
 * Ruby version
+    3.1.3
 
 * System dependencies
 
