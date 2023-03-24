@@ -20,3 +20,14 @@ This is the repo of the BDD course with Rails 6 - Alpha blog
 * Deployment instructions
 
 * ...
+
+- Visit a root page
+- click on a new article
+- fill in tittle
+- fill in body
+- fill in body
+- create article
+
+expectations:
+- Article has been create
+- articles path

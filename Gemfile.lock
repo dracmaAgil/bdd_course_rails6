@@ -134,6 +134,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
+    pg (1.4.6)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -221,7 +222,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.1-x86_64-linux)
     temple (0.10.0)
     thor (1.2.1)
     tilt (2.1.0)
@@ -258,6 +258,7 @@ DEPENDENCIES
   html2haml
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pg (~> 1.4, >= 1.4.6)
   pry-byebug
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
@@ -265,7 +266,6 @@ DEPENDENCIES
   rspec-rails (~> 6.0)
   sass-rails (>= 6)
   spring
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
