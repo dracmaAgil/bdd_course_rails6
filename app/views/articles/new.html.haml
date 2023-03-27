@@ -1,18 +1,18 @@
-%h3.text-center Adding New Article
-
-.row
-  .col-md-12
-    =form_for(@article, html: {class: 'form-horizontal', role: 'form'}) do |f|
-      .form-group
-        .col-md-1{class: 'control-label'}
-          =f.label :title
-        .col-md-11
-          =f.text_field :title, class: 'form-control', placeholder: 'Title of article', autofocus: true
-      .form-group
-        .col-md-1{class: 'control-label'}
-          =f.label :body
-        .col-md-11
-          =f.text_area :body, rows:10, class: 'form-horizontal', placeholder: 'Body of article', autofocus: true
-      .form-group
-        .col-md-1{class: 'col-md-ofsset-1'}
-          =f.submit 'Create Article ', class:'btn btn-primary btn-lg pull-right', disable_with: 'Creating new article...'
+.container.text-center
+  %h3 Adding New Article
+  =form_for(@article, html: {class: 'form-horizontal', role: 'form'}) do |f|
+    .row{class: 'align-items-center'}
+      .col-md-12
+        .input-group.mb-3
+          .col-md-1{class: 'form-label'}
+            =f.label :title
+          .col-md-11
+            =f.text_field :title, class: 'form-control', placeholder: 'Title of article', autofocus: true
+        .input-group.mb-3
+          .col-md-1{class: 'form-label'}
+            =f.label :body
+          .col-md-11
+            =f.text_area :body, rows:10, class: 'form-control', placeholder: 'Body of article', autofocus: true
+        .input-group.mb-3
+          .col-md-12.col-md-ofsset-1
+            =f.submit 'Create Article ', class:'btn btn-primary btn-lg float-lg-end', disable_with: 'Creating new article...'
