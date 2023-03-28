@@ -1,8 +1,18 @@
-.container.text-center
-  %h3 Adding New Article
-  =form_for(@article, html: {class: 'form-horizontal', role: 'form'}) do |f|
-    .row{class: 'align-items-center'}
-      .col-md-12
+.container
+  %h3.text-center Adding New Article
+  .row{class: 'align-items-center'}
+    .col-md-12
+      =form_for(@article, html: {class: 'form-horizontal', role: 'form'}) do |f|
+        - if @article.errors.any?
+          .card.bg-danger.text-white.mb-3.col-md-ofsset-1
+            .card-header
+              %h5.card-title
+                =pluralize(@article.errors.count, 'error')
+                prohibited this article from being saved:
+              .card-body
+                %ul 
+                  - @article.errors.full_messages.each do |msg|
+                    %li.card-text= msg
         .input-group.mb-3
           .col-md-1{class: 'form-label'}
             =f.label :title
