@@ -12,7 +12,8 @@ import 'bootstrap'
 import "@fortawesome/fontawesome-free/js/all"
 import { Tooltip, Popover } from "bootstrap"
 
-require("../../assets/stylesheets/application.scss")
+// The stylesheet location we created earlier
+require("../stylesheets/application.scss")
 
 document.addEventListener("turbolinks:load", () => {
   // Both of these are from the Bootstrap 5 docs
