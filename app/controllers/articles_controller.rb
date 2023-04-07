@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   def index
-    @article = Article.all
+    @articles = Article.all
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
   
   def new
@@ -16,6 +20,21 @@ class ArticlesController < ApplicationController
       flash.now[:danger] = 'Article has not been created'
       render :new
     end
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update_attributes(article_params)
+      flash[:success] = 'Article has been updated'
+      redirect_to articles_path
+    else
+      flash.now[:danger] = 'Article has not been updated'
+      render :new
+    end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
   end
 
   private

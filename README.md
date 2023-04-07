@@ -31,3 +31,11 @@ This is the repo of the BDD course with Rails 6 - Alpha blog
 expectations:
 - Article has been create
 - articles path
+
+
+- create branch
+- create 2 articles to display
+
+- list the two articles
+
+-expect both article title and bodies to be present
