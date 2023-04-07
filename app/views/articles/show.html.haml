@@ -1,0 +1,10 @@
+= link_to('Go back', articles_path, class: 'btn btn-secondary btn-lg')
+
+%article{class: 'detail-article'}
+  %h1{class: 'article-detail-tittle'}= @article.title
+  
+  .glyphicon.glyphicon-calendar{id: 'article-date'}
+    = @article.created_at.strftime("%b %d %Y")
+  
+  .article-body
+    = @article.body
