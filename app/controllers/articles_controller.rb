@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
   
   def new
     @article = Article.new
@@ -24,12 +28,12 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update_attributes(article_params)
+    if @article.update(article_params)
       flash[:success] = 'Article has been updated'
-      redirect_to articles_path
+      redirect_to @article
     else
       flash.now[:danger] = 'Article has not been updated'
-      render :new
+      render :edit
     end
   end
 
