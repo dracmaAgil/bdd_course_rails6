@@ -39,3 +39,14 @@ expectations:
 - list the two articles
 
 -expect both article title and bodies to be present
+
+Sign up users -
+- visit root
+-click on sign-up link
+- email
+- password confirm
+
+-sign-up
+
+Invalid sign up
+- do an invalid sign up and ensure that it fails
