@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem "haml-rails", "~> 2.0"
 gem 'html2haml'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails', '~> 6.0'
