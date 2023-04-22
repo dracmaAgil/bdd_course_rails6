@@ -10,3 +10,6 @@
         = link_to(article.title, article_path(article), class: 'article-link')
       .article-body.mb-3
         = truncate(article.body, length: 500)
+      .author
+        %small
+          = "Created by: #{article.user.email}"
