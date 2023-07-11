@@ -1,0 +1,28 @@
+%h2.text-center Log in
+.row
+  .col-md-12
+    = form_for(resource, as: resource_name, html: {class:'form-horizontal', form: 'form'}, 
+      url: session_path(resource_name)) do |f|
+      .input-group.mb-3
+        .control-label.col-md-3
+          = f.label :email
+        .col-md-9
+          = f.email_field :email, class: 'form-control', autofocus: true, autocomplete: "email"
+      .input-group.mb-3
+        .control-label.col-md-3= f.label :password
+        .col-md-9
+          = f.password_field :password, class: 'form-control', autocomplete: "current-password"
+      
+      - if devise_mapping.rememberable?
+        .input-group.mb-3
+          .col-md-9.offset-md-3
+            .checkbox
+              %label
+                = f.check_box :remember_me
+                Remember me
+      .input-group.mb-3
+        .col-md-9.offset-md-3
+          = f.submit "Log in", class: 'btn btn-primary btn-lg'
+      .input-group.mb-3
+        .col-md-9.offset-md-3.sign-link
+          = render "devise/shared/links"
